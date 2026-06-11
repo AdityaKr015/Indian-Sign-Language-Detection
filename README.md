@@ -82,7 +82,7 @@ The model was evaluated on a dedicated validation split to assess generalization
 
 ### 5. **Inference and Output**
  
-- The trained YOLOv1 model was used for inference on new test images.
+- The trained YOLOv11 model was used for inference on new test images.
 - Each detected object was marked with a bounding box, label, and confidence score.
 - Results showed that the model successfully detected multiple objects simultaneously and delivered accurate predictions.
 - The outputs demonstrated the system’s ability to be applied in real world scenarios such as surveillance, product detection, and automation tasks.
