@@ -96,9 +96,174 @@ The model was evaluated on a dedicated validation split to assess generalization
 
 ## **WORKFLOW:- **
 
+```mermaid
+flowchart TD
+    A["🗄️ Dataset Source
+    Roboflow Universe
+    6K+ Labeled Images
+    110 Hindi Classes"]
 
+    B["📦 Dataset Preparation
+    BBox Annotation
+    YOLO Format Export
+    Train / Val / Test Split"]
 
+    C["☁️ Kaggle Platform
+    Upload Dataset
+    Setup Dual T4 GPU
+    Install Ultralytics"]
 
+    D["🧠 Pretrained Model
+    YOLOv11m
+    Ultralytics
+    Transfer Learning"]
+
+    E["⚙️ Model Training
+    Epochs: 200 | Batch: 48
+    Img Size: 640×640
+    Optimizer: AdamW | LR: 0.001"]
+
+    F["🎨 Data Augmentation
+    HSV Color Jitter
+    Rotation ±10° | Mosaic
+    Flip / Scale / Shear"]
+
+    G["📊 Model Validation
+    Precision: 87.9%
+    Recall: 88.0%
+    mAP@50: 86.4%"]
+
+    H{"✅ Accuracy
+    Acceptable?"}
+
+    I["💾 Save Best Weights
+    best.pt
+    Download via ZIP"]
+
+    J["🔍 Inference & Testing
+    Test Dataset
+    Bounding Boxes
+    Hindi Labels + Confidence"]
+
+    K["🎯 Real-Time Detection
+    Webcam / Video Feed
+    Live Hindi Sign Labels
+    Confidence Scores"]
+
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H -- No --> E
+    H -- Yes --> I
+    I --> J
+    J --> K
+
+    style A fill:#6100ee,color:#fff,stroke:#4a00b4,stroke-width:2px
+    style B fill:#4A90D9,color:#fff,stroke:#2c6fad,stroke-width:2px
+    style C fill:#20BEFF,color:#000,stroke:#0090cc,stroke-width:2px
+    style D fill:#00CED1,color:#000,stroke:#009aa0,stroke-width:2px
+    style E fill:#FF6B35,color:#fff,stroke:#cc4a10,stroke-width:2px
+    style F fill:#E8A838,color:#000,stroke:#b87d10,stroke-width:2px
+    style G fill:#2ECC71,color:#fff,stroke:#1a9e50,stroke-width:2px
+    style H fill:#E74C3C,color:#fff,stroke:#b52a1c,stroke-width:2px
+    style I fill:#8E44AD,color:#fff,stroke:#6a2585,stroke-width:2px
+    style J fill:#3498DB,color:#fff,stroke:#1a6fad,stroke-width:2px
+    style K fill:#27AE60,color:#fff,stroke:#1a7a40,stroke-width:2px
+```
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              INDIAN SIGN LANGUAGE DETECTION — WORKFLOW                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  ┌─────────────────────┐
+  │   📡 DATA SOURCE    │
+  │   Roboflow Universe │
+  │   6K+ Images        │
+  │   110 Hindi Classes │
+  └──────────┬──────────┘
+             │
+             ▼
+  ┌─────────────────────┐
+  │  📦 DATA PREP       │
+  │  BBox Annotation    │
+  │  YOLO Format        │
+  │  Train/Val/Test     │
+  └──────────┬──────────┘
+             │
+             ▼
+  ┌─────────────────────┐     ┌─────────────────────┐
+  │  ☁️ KAGGLE SETUP    │────▶│  🧠 YOLOv11m BASE   │
+  │  Dual T4 GPU        │     │  Pretrained Weights  │
+  │  Ultralytics Lib    │     │  Transfer Learning   │
+  └──────────┬──────────┘     └──────────┬──────────┘
+             │                           │
+             └──────────┬────────────────┘
+                        │
+                        ▼
+           ┌────────────────────────┐
+           │   ⚙️ MODEL TRAINING    │
+           │  Epochs    : 200       │
+           │  Batch     : 48        │
+           │  Img Size  : 640×640   │
+           │  Optimizer : AdamW     │
+           │  LR        : 0.001     │
+           │  Loss Box  : 7.5       │
+           └────────────┬───────────┘
+                        │
+                        ▼
+           ┌────────────────────────┐
+           │  🎨 AUGMENTATION       │
+           │  HSV Color Jitter      │
+           │  Rotation ±10°         │
+           │  Mosaic (4 Images)     │
+           │  Flip / Scale / Shear  │
+           └────────────┬───────────┘
+                        │
+                        ▼
+           ┌────────────────────────┐
+           │  📊 VALIDATION         │
+           │  Precision : 87.9%     │
+           │  Recall    : 88.0%     │
+           │  mAP@50    : 86.4%     │
+           │  mAP@50-95 : 51.0%     │
+           └────────────┬───────────┘
+                        │
+               ┌────────▼────────┐
+               │  ✅ Acceptable? │
+               └────────┬────────┘
+                  NO ◀──┘──▶ YES
+                  │             │
+                  │             ▼
+                  │   ┌──────────────────┐
+                  │   │  💾 SAVE WEIGHTS │
+                  │   │  best.pt         │
+                  │   │  Download ZIP    │
+                  │   └────────┬─────────┘
+                  │            │
+                  └────────────┘
+                               │
+                               ▼
+                  ┌────────────────────────┐
+                  │  🔍 INFERENCE          │
+                  │  Test Images           │
+                  │  Bounding Boxes        │
+                  │  Hindi Labels          │
+                  │  Confidence Scores     │
+                  └────────────┬───────────┘
+                               │
+                               ▼
+                  ┌────────────────────────┐
+                  │  🎯 REAL-TIME OUTPUT   │
+                  │  Live Webcam Feed      │
+                  │  Hindi Sign Labels     │
+                  │  Instant Recognition   │
+                  └────────────────────────┘
+                  
 ## **Project Structure**
 ```
 ├── notebook/Indian Sign Language Detection.ipynb         # Main Jupyter Notebook
