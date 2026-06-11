@@ -1,14 +1,14 @@
 # **Indian-Sign-Language-Detection**
 
-**Frameworks & Libraries:**
+**Frameworks & Libraries:- **
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![Ultralytics](https://img.shields.io/badge/Ultralytics-YOLOv11-00FFFF)
 
-**Platforms:**
+**Platforms:- **
 ![Roboflow](https://img.shields.io/badge/Roboflow-6100ee?logo=roboflow&logoColor=white)
 ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?logo=kaggle&logoColor=white)
 
-**License:**
+**License:- **
 ![MIT](https://img.shields.io/badge/License-MIT-green)
 
 A College Deeplearning Project build Sign Detection in Hindi langauge annotation.
@@ -23,7 +23,7 @@ The full model training pipeline can be found here:
 
 In this project, I build a real time hand sign detection which shows hindi labels with confidence score using transfer learning (pretrained yolo v11 model) using dataset from Roboflow and fine tune train on Kaggle platform.
 
-The main goal of this project is to:
+The main goal of this project is to:-
 
 - Helps to understand the sign langauge in hindi for people who don't know hand sign langauge.
 
@@ -68,9 +68,9 @@ We fine-tuned the pre-trained YOLOv11m model from Ultralytics using transfer lea
 
 - Data Augmentation Strategy:- To ensure robustness against real-world lighting and camera angles, the following augmentations were applied:
   
-  - Color (HSV): Hue (±0.015), Saturation (±0.7), and Brightness (±0.4) variations.
-  - Geometry: Rotation (±10°), translation (±10%), scale/zoom (±50%), shear (±10°), perspective (0.001), and horizontal flip (50% probability).
-  - Context: Mosaic (1.0) combining 4 training images to improve small-object/hand gesture detection.
+  - Color (HSV):= Hue (±0.015), Saturation (±0.7), and Brightness (±0.4) variations.
+  - Geometry:- Rotation (±10°), translation (±10%), scale/zoom (±50%), shear (±10°), perspective (0.001), and horizontal flip (50% probability).
+  - Context:- Mosaic (1.0) combining 4 training images to improve small-object/hand gesture detection.
 
 ### 4. Model Validation
 The model was evaluated on a dedicated validation split to assess generalization to unseen data. The key evaluation metrics used include:
@@ -94,12 +94,12 @@ The model was evaluated on a dedicated validation split to assess generalization
 <img width="3000" height="2250" alt="image" src="https://github.com/user-attachments/assets/eee6ee2f-fd13-4fde-b2ff-855c88542d32" />
 
 
-## **WORKFLOW:**
+## **WORKFLOW:- **
 
 
 
 
-## 📂 **Project Structure**
+## **Project Structure**
 ```
 ├── notebook/Indian Sign Language Detection.ipynb         # Main Jupyter Notebook
 
@@ -136,12 +136,16 @@ Contains 6k of labeled images of sign language with hindi annotations.
 <img width="640" height="640" alt="ghalat_49_jpg rf 9129856a7c4485f144a0f56cd76a5d99" src="https://github.com/user-attachments/assets/be39f059-2666-4699-a794-9372fb1ee43a" />
 
 
-## Model achieved:
+## Results:
 
-- `Precision`: ~ 87.9%
-- `Recall`: ~ 88.0%
-- `mAP@50`: ~ 86.4%
-- `mAP@50–95`: ~ 51.0%
+### Evaluation Metrics:-
+
+| Metrics | Score |
+|-------|--------|
+|`Precision`| ~ 87.9%|
+|`Recall`| ~ 88.0%|
+|`mAP@50`| ~ 86.4%|
+|`mAP@50–95`:| ~ 51.0%|
 
 Correctly classifies speed limits, stop signs, and other common traffic symbols.
 
