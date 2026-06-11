@@ -216,7 +216,6 @@ flowchart TD
 │   ├── train/
 │   │   └── weights/                           # Saved model weights
 │   └── predict/                               # Testing images & outputs
-├── requirements.txt                           # Dependencies
 └── README.md                                  # Project documentation
 ```
 
