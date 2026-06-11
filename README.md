@@ -263,7 +263,6 @@ flowchart TD
 
 This project is licensed under the MIT License.
 
-Correctly classifies speed limits, stop signs, and other common traffic symbols.
 
 
  
