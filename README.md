@@ -93,11 +93,12 @@ The model was evaluated on a dedicated validation split. Key metrics:
 
 ### Confusion Matrix (Normalized)
 
-
 <img width="3000" height="2250" alt="image" src="https://github.com/user-attachments/assets/eee6ee2f-fd13-4fde-b2ff-855c88542d32" />
 
 > The **diagonal dark blue cells** represent correct predictions per class.
-> Strong diagonal dominance across all **110 Hindi sign classes** confirms the 
+
+> Strong diagonal dominance across all **110 Hindi sign classes** confirms the
+
 > model learned clear boundaries between gestures with minimal confusion.
 
 ### Training & Validation Curves
@@ -105,20 +106,22 @@ The model was evaluated on a dedicated validation split. Key metrics:
 <img width="2400" height="1200" alt="image" src="https://github.com/user-attachments/assets/e5372bff-7512-4bd3-b11b-29b9910437fa" />
 
 > All **loss curves decrease smoothly** over 200 epochs with no overfitting.
-> **Precision, Recall, mAP@50 and mAP@50-95** all rise steadily — confirming 
-> stable training and strong generalization on unseen data.
+
+> **Precision, Recall, mAP@50 and mAP@50-95** all rise steadily.
+
+> Stable training and strong generalization on unseen data.
 
 ###  Why These Results Are Strong
 
 | Factor | Evidence |
 |--------|---------|
-| **High Precision ~88%** | Very few false detections — model doesn't hallucinate signs |
+| **High Precision ~88%** | Very few false detections, model doesn't hallucinate signs |
 | **High Recall ~88%** | Catches almost all real hand gestures in frame |
 | **Diagonal Confusion Matrix** | Clean class separation across all 110 Hindi signs |
-| **Smooth Loss Curves** | Stable training — no exploding/vanishing gradients |
+| **Smooth Loss Curves** | Stable training, no exploding/vanishing gradients |
 | **mAP@50 ~86%** | Reliable detection across varied real-world conditions |
-| **mAP@50-95 ~51%** | Good bounding box tightness — not just rough localization |
-| **Val Loss ≈ Train Loss** | Model generalizes — not memorizing training data |
+| **mAP@50-95 ~51%** | Good bounding box tightness, not just rough localization |
+| **Val Loss ≈ Train Loss** | Model generalizes, not memorizing training data |
 
 ## **WORKFLOW:-**
 
@@ -208,19 +211,12 @@ flowchart TD
 ## **Project Structure**
 ```
 ├── notebook/
-
 │   └── Indian Sign Language Detection.ipynb   # Main Jupyter Notebook
-
 ├── detect/
-
 │   ├── train/
-
 │   │   └── weights/                           # Saved model weights
-
 │   └── predict/                               # Testing images & outputs
-
 ├── requirements.txt                           # Dependencies
-
 └── README.md                                  # Project documentation
 ```
 
@@ -261,6 +257,11 @@ flowchart TD
 |`Recall`| ~ 88.0%|
 |`mAP@50`| ~ 86.4%|
 |`mAP@50–95`:| ~ 51.0%|
+
+
+## **License**
+
+This project is licensed under the MIT License.
 
 Correctly classifies speed limits, stop signs, and other common traffic symbols.
 
