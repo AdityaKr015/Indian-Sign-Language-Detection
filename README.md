@@ -13,11 +13,15 @@
 
 A College Deeplearning Project that build Sign Detection with Hindi langauge annotation.
 
+---
+
 ## 📓 Training Notebook
 
 The full model training pipeline can be found here:
 
 [Open Notebook](notebook/Indian%20Sign%20Language%20Detection.ipynb)
+
+---
 
 ## **Project Overview**
 
@@ -88,7 +92,9 @@ The model was evaluated on a dedicated validation split. Key metrics:
 - The trained YOLOv11 model was used for inference on new test images.
 - Each detected object was marked with a **bounding box**, **Hindi label** and **confidence score**.
 - Results showed the model successfully detected multiple hand gestures simultaneously.
-  
+
+---
+
 # **Confusion Matrix & Results data**
 
 ### Confusion Matrix (Normalized)
@@ -122,6 +128,8 @@ The model was evaluated on a dedicated validation split. Key metrics:
 | **mAP@50 ~86%** | Reliable detection across varied real-world conditions |
 | **mAP@50-95 ~51%** | Good bounding box tightness, not just rough localization |
 | **Val Loss ≈ Train Loss** | Model generalizes, not memorizing training data |
+
+---
 
 ## **WORKFLOW:-**
 
@@ -207,7 +215,9 @@ flowchart TD
     style J fill:#3498DB,color:#fff,stroke:#1a6fad,stroke-width:2px
     style K fill:#27AE60,color:#fff,stroke:#1a7a40,stroke-width:2px
 ```
-                  
+
+---
+
 ## **Project Structure**
 ```
 ├── notebook/
@@ -218,6 +228,7 @@ flowchart TD
 │   └── predict/                               # Testing images & outputs
 └── README.md                                  # Project documentation
 ```
+---
 
 ## ⚙️ **Tech Stack**
 
@@ -225,6 +236,8 @@ flowchart TD
 - `Frameworks/Libraries`:- Ultralytics (YOLO Framework)
 - `Training PLatform`:- Kaggle (Dual T4 GPU)
 - `Dataset PLatform`:- Roboflow Universe
+
+---
 
 ## Dataset
 
@@ -236,15 +249,53 @@ flowchart TD
 - 110 Hindi sign language classes
 - Exported in YOLO format with Train / Val / Test splits
 
+---
 
 ## 📈 **Outputs**
 
-<img width="640" height="640" alt="aaj_16_jpg rf f1cbd4850e0dfc9093eae2503a0d5cd9" src="https://github.com/user-attachments/assets/1de3c7a4-4bed-47bd-a8ad-fc04dda6ae41" />
-<img width="640" height="640" alt="alvidah_5_jpg rf 2aa8ccbd69f6209ca0ed36947563eb8d" src="https://github.com/user-attachments/assets/b384f224-409c-4082-a836-fd45a29aedee" />
-<img width="640" height="640" alt="acha_27_jpg rf 25754bccd89a77a440b0eb56a18ea96e" src="https://github.com/user-attachments/assets/300ac5d2-8eb4-4f3c-8bce-557c4eb80334" />
-<img width="640" height="640" alt="baithna_51_jpg rf beb30d6de683cf3550da89ba338bc999" src="https://github.com/user-attachments/assets/4f02a642-eabb-45e8-9ae5-0781dee17178" />
-<img width="640" height="640" alt="ghalat_49_jpg rf 9129856a7c4485f144a0f56cd76a5d99" src="https://github.com/user-attachments/assets/be39f059-2666-4699-a794-9372fb1ee43a" />
+<table border="0">
+  <tr>
+    <td align="center">
+      <b>ajj</b><br><br>
+      <img src="https://github.com/user-attachments/assets/1de3c7a4-4bed-47bd-a8ad-fc04dda6ae41">
+      <br>
+    </td>
+    <td align="center">
+      <b>alvidah</b><br><br>
+      <img src="https://github.com/user-attachments/assets/b384f224-409c-4082-a836-fd45a29aedee">
+      <br>
+    </td>
+  </tr>
 
+  <tr>
+    <td align="center">
+      <b>acha</b><br><br>
+      <img src="https://github.com/user-attachments/assets/300ac5d2-8eb4-4f3c-8bce-557c4eb80334">
+      <br>
+    </td>
+    <td align="center">
+      <b>baithna</b><br><br>
+        <img src="https://github.com/user-attachments/assets/4f02a642-eabb-45e8-9ae5-0781dee17178">
+        <br>
+    </td>
+  </tr>
+
+   <tr>
+    <td align="center">
+      <b>ghalat</b><br><br>
+      <img src="https://github.com/user-attachments/assets/be39f059-2666-4699-a794-9372fb1ee43a">
+      <br>
+    </td>
+    <td align="center">
+      <b>asalamalaikum</b><br><br>
+        <img src="https://github.com/user-attachments/assets/4d3e79f4-0c3c-4b60-82fa-d8ab2cad9807">
+        <br>
+    </td>
+  </tr>
+</table>
+
+
+---
 
 ## Results:
 
@@ -257,6 +308,7 @@ flowchart TD
 |`mAP@50`| ~ 86.4%|
 |`mAP@50–95`:| ~ 51.0%|
 
+---
 
 ## **License**
 
