@@ -8,8 +8,7 @@
 ![Roboflow](https://img.shields.io/badge/Roboflow-6100ee?logo=roboflow&logoColor=white)
 ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?logo=kaggle&logoColor=white)
 
-**License:-**
-![MIT](https://img.shields.io/badge/License-MIT-green)
+**License:-** [![AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue)](LICENSE)
 
 A College Deeplearning Project that build Sign Detection with Hindi langauge annotation.
 
@@ -312,7 +311,11 @@ flowchart TD
 
 ## **License**
 
-This project is licensed under the MIT License.
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+See the [LICENSE](LICENSE) file for the full license text.
+
+This project uses the [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) framework. The Ultralytics software and related components are subject to their respective licensing terms.
 
 
 
